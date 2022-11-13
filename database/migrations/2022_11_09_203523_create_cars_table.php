@@ -17,7 +17,6 @@ class CreateCarsTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string("marca");
-            $table->boolean("tipo");
             $table->string("ano");
             $table->text("descricao");
         });
