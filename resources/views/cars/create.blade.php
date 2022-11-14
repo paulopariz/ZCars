@@ -9,7 +9,7 @@
     <form action="/cars" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
-        <label for="title">Imagen</label>
+        <label for="title">Imagem</label>
             <input type="file" id="image" name="image" class="from-control-file">
         </div>
 
@@ -19,10 +19,24 @@
         </div>
 
         <div class="form-group">
-        <label for="title">Ano</label>
-            <input type="text" class="form-control" name="ano" placeholder="Ano">
+        <label for="title">Modelo</label>
+            <input type="text" class="form-control" name="modelo" placeholder="Modelo">
         </div>
 
+        <div class="form-group">
+        <label for="title">Ano</label>
+            <input type="number" class="form-control" name="ano" placeholder="Ano">
+        </div>
+
+        <div class="form-group">
+        <label for="title">Km</label>
+            <input type="number" class="form-control" name="km" placeholder="Km">
+        </div>
+
+        <div class="form-group">
+        <label for="title">Preço</label>
+            <input type="number" class="form-control" name="preco" placeholder="Preço">
+        </div>
 
         <div class="form-group">
         <label for="title">Descrição</label>

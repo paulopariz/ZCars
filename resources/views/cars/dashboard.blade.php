@@ -23,7 +23,7 @@
                         <td scropt="row">{{ $loop->index + 1 }}</td>
                         <td><a href="/cars/{{ $car->id }}">{{ $car->marca }}</a></td>
                         <td>
-                            <a href="#" class="btn btn-info">Editar</a> 
+                            <a href="/cars/edit/{{ $car->id }}" class="btn btn-info">Editar</a> 
                             <form action="/cars/{{ $car->id }}" method="POST">
                                 @csrf
                                 @method('DELETE')

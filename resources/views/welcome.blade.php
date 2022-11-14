@@ -18,6 +18,9 @@
             <p>{{ $car->marca }}</p>
             <p>{{ $car->descricao }}</p>
             <p>{{ $car->ano }}</p>
+            <p>{{ $car->modelo }}</p>
+            <p>{{ $car->km }}</p>
+            <p>{{ $car->preco }}</p>
             <a href="/cars/{{ $car->id }}" class="btn btn-primary">Ver</a>
         </div>
     @endforeach

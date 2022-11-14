@@ -40,7 +40,10 @@ class CarsController extends Controller
         $car = new Car;
 
         $car->marca = $request->marca;
+        $car->modelo = $request->modelo;
         $car->ano = $request->ano;
+        $car->km = $request->km;
+        $car->preco = $request->preco;
         $car->descricao = $request->descricao;
 
         // Imagem
@@ -89,5 +92,35 @@ class CarsController extends Controller
         Car::findOrFail($id)->delete();
 
         return redirect('/dashboard')->with('msg', 'Carro excluído!');
+    }
+
+    public function edit($id) {
+
+        $car = Car::findOrFail($id);
+
+        return view('cars.edit', ['car' => $car]);
+    }
+
+    public function update(Request $request) {
+
+        $data = $request->all();
+
+                // Update Imagem
+                if($request->hasFile('image') && $request->file('image')->isValid()) {
+                    $requestImage = $request->image;
+        
+                    $extension = $requestImage->extension();
+        
+                    $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
+        
+                    $requestImage->move(public_path('img/cars'), $imageName);
+        
+                    $data['image'] = $imageName;
+                }
+
+        Car::findOrFail($request->id)->update($data);
+
+        return redirect('/dashboard')->with('msg', 'Carro editado!');
+
     }
 }
