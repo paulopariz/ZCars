@@ -25,12 +25,26 @@
                         <li>
                             <a href="/cars/create" class="nav-link">Create</a>
                         </li>
+                        @auth
                         <li>
-                            <a href="/" class="nav-link">Sign in</a>
+                            <a href="/dashboard" class="nav-link">Minhas vendas</a>
                         </li>
                         <li>
-                            <a href="/" class="nav-link">Sign up</a>
+                            <form action="/logout" method="POST">
+                                @csrf
+                                <a href="/logout" class="nav-link" onclick="event.preventDefault();
+                                this.closest('form').submit();">Sair</a>
+                            </form>
                         </li>
+                        @endauth
+                        @guest
+                        <li>
+                            <a href="/login" class="nav-link">Entrar</a>
+                        </li>
+                        <li>
+                            <a href="/register" class="nav-link">Cadastrar</a>
+                        </li>
+                        @endguest
                     </ul>
                 </div>
             </nav>

@@ -16,18 +16,13 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarsController;
 
 Route::get('/', [CarsController::class, 'index']);
-Route::get('/cars/create', [CarsController::class, 'create']);
+Route::get('/cars/create', [CarsController::class, 'create'])->middleware('auth') ;
 Route::get('/cars/{id}', [CarsController::class, 'show']);
 Route::post('/cars', [CarsController::class, 'store']);
+Route::delete('/cars/{id}', [CarsController::class, 'destroy']);
 
 
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-});
+Route::get('/dashboard', [CarsController::class, 'dashboard'])->middleware('auth');
+
+

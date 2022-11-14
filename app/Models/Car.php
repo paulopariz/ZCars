@@ -9,5 +9,8 @@ class Car extends Model
 {
     use HasFactory;
 
- 
+    public function user() {
+        return $this->belongsTo('App\Model\User');
+    }
+
 }

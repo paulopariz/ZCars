@@ -13,6 +13,7 @@
                 <h1>{{ $car->marca }}</h1>
             </div>
             <div class="col-md-12">
+                <p>{{ $carOwner['name'] }}</p>
                 <h3>Descricao</h3>
                 <p> {{ $car->descricao }}</p>
             </div>
