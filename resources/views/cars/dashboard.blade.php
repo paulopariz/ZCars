@@ -6,10 +6,14 @@
 
     <div class="col-md-10 offset-md-1">
         <h1>xxx</h1>
+
     </div>
     <div class="col-md-10 offset-md-1">
         @if(count($cars) > 0)
         <table class="table">
+
+                <a href="/cars/create" class="btn btn-dark">Create</a>
+
             <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -23,7 +27,7 @@
                         <td scropt="row">{{ $loop->index + 1 }}</td>
                         <td><a href="/cars/{{ $car->id }}">{{ $car->marca }}</a></td>
                         <td>
-                            <a href="/cars/edit/{{ $car->id }}" class="btn btn-info">Editar</a> 
+                            <a href="/cars/edit/{{ $car->id }}" class="btn btn-info">Editar</a>
                             <form action="/cars/{{ $car->id }}" method="POST">
                                 @csrf
                                 @method('DELETE')
@@ -38,7 +42,7 @@
 
 
         @else
-        <p>Nenhum carro cadastrado por você <a href="/cars/crate">Cadastrar carro</a></p>
+        <p>Nenhum carro cadastrado por você <a href="/cars/create">Cadastrar carro</a></p>
         @endif
     </div>
 

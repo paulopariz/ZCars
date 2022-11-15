@@ -9,25 +9,33 @@
         <link rel="stylesheet" href="/css/style.css">
         <script src="/js/script.js"></script>
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-        
+
     </head>
     <body>
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="collapse navbar-collapse" id="navbar">
-                    <ul class="navbar-nav">
+        <header style="max-width: 1200px; margin: auto;">
+            <nav class="navbar navbar-expand-lg static-top">
+                <div>
+                    <a  class="navbar-brand" href="#">
+                        <img src="/img/logo.png" alt="logo" width="48">
+                    </a>
+                </div>
+
+                    <ul class="navbar-nav ms-auto">
+
                         <li>
-                            <a href="/" class="nav-link">Home</a>
+                            <a href="/" class="nav-link">Página inicial</a>
                         </li>
-                        <li>
-                            <a href="/cars/create" class="nav-link">Create</a>
-                        </li>
+
                         @auth
                         <li>
-                            <a href="/dashboard" class="nav-link">Minhas vendas</a>
+                            <a href="/dashboard" class="nav-link">Anunciar</a>
                         </li>
                         <li>
                             <form action="/logout" method="POST">
@@ -46,12 +54,12 @@
                         </li>
                         @endguest
                     </ul>
-                </div>
             </nav>
         </header>
 
 
-        <main>
+        <main class="container">
+
             <div class="container-fluid">
                 <div class="row">
                     @if(session('msg'))
@@ -61,6 +69,6 @@
                 </div>
             </div>
         </main>
-        
+
     </body>
 </html>
