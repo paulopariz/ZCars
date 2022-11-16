@@ -30,15 +30,89 @@
             </a>
         </div>
     </div>
-</main>
 
-    <form action="/" method="GET">
-        <input type="text" name="search" class="form-control" placeholder="Procurar">
-    </form>
+    <div>
+            <h2>Buscar por carro</h2>
 
-    @if($search)
-    <p>Buscando por: {{ $search }}</p>
-    @endif
+        <form action="/" method="GET">
+            <div class="input-group mb-3" style="margin-top: 1rem">
+                <span class="input-group-text text-white" id="basic-addon1"><i class="bi bi-search"></i></span>
+                <input style="max-width: 270px" type="text" class="form-control" name="search" placeholder="Pesquisar carro" aria-describedby="basic-addon1">
+            </div>
+        </form>
+
+    </div>
+
+    <div>
+        <div class="container text-center" style="margin-top: 5rem;">
+            <div class="row">
+              <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/cars/x.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Chevrolet S10</h5>
+
+                      <div class="d-flex justify-content-center gap-5" style="margin-top:1.2rem;">
+                          <p class="card-text fw-bold text-black-50">2022</p>
+                          <p class="card-text fw-bold text-black-50">7000 KM</p>
+                      </div>
+
+                      <div class="d-flex align-items-center justify-content-center  gap-5">
+                          <p class="fs-4 fw-bold" style="margin-top: 17px;">R$ 75000 </p>
+                          <a href="" class="fs-4 d-flex align-items-center text-decoration-none text-danger">Ver<i class="bi bi-arrow-right-short fs-2 text-danger"></i></a>
+                      </div>
+                    </div>
+                </div>
+              </div>
+
+
+                    <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/cars/x.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Chevrolet S10</h5>
+
+                      <div class="d-flex justify-content-center gap-5" style="margin-top:1.2rem;">
+                          <p class="card-text fw-bold text-black-50">2022</p>
+                          <p class="card-text fw-bold text-black-50">7000 KM</p>
+                      </div>
+
+                      <div class="d-flex align-items-center justify-content-center  gap-5">
+                          <p class="fs-4 fw-bold" style="margin-top: 17px;">R$ 75000 </p>
+                          <a href="" class="fs-4 d-flex align-items-center text-decoration-none text-danger">Ver<i class="bi bi-arrow-right-short fs-2 text-danger"></i></a>
+                      </div>
+                    </div>
+
+
+                </div>
+              </div>
+
+
+                    <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/cars/x.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Chevrolet S10</h5>
+
+                      <div class="d-flex justify-content-center gap-5" style="margin-top:1.2rem;">
+                          <p class="card-text fw-bold text-black-50">2022</p>
+                          <p class="card-text fw-bold text-black-50">7000 KM</p>
+                      </div>
+
+                      <div class="d-flex align-items-center justify-content-center  gap-5">
+                          <p class="fs-4 fw-bold" style="margin-top: 17px;">R$ 75000 </p>
+                          <a href="" class="fs-4 d-flex align-items-center text-decoration-none text-danger">Ver<i class="bi bi-arrow-right-short fs-2 text-danger"></i></a>
+                      </div>
+                    </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+    </div>
+
+
 
 
 
@@ -57,10 +131,10 @@
     @endforeach
 
     @if(count($cars) ==0 && $search)
-        <p>Não há registros de: {{ $search }} <a href="/">Outras opções</a></p>
+        <p class="fs-4">{{ $search }} não encontrado</p>
     @elseif(count($cars) == 0)
         <p>Não há carros registrados</p>
     @endif
 
-
+</main>
 @endsection

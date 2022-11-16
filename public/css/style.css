@@ -5,6 +5,7 @@ a.nav-link{
     color: #000000;
     margin-left: 10px;
     transition: 0.3s;
+    font-size: 1.2rem;
 }
 a.nav-link:hover{
     color: #bf0404;
@@ -25,7 +26,7 @@ main{
     display: flex;
     gap: 12rem;
     justify-content: center;
-    margin-bottom: 100px;
+    margin-bottom: 6rem;
 }
 .opcoes > div{
     display: flex;
@@ -56,3 +57,8 @@ main{
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
 }
+
+#basic-addon1{
+    background-color: #bf0404;
+}
+
