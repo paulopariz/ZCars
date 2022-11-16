@@ -25,7 +25,7 @@
         </div>
         <div>
             <img id="img2" src="/img/compra.png" alt="">
-            <a class="fs-2 fw-bold text-white m-auto text-decoration-none" href="#">
+            <a class="fs-2 fw-bold text-white m-auto text-decoration-none" href="#cars">
                 COMPRAR
             </a>
         </div>
@@ -44,7 +44,7 @@
     </div>
 
 
-    <div>
+    <div id="cars">
         <div class="container text-center" style="margin-top: 7rem; margin-bottom: 7rem;">
 
             <div class="row row-cols-3">
@@ -78,7 +78,6 @@
               @endforeach
 
 
-
             </div>
 
           </div>
@@ -90,32 +89,7 @@
               <p>Não há carros registrados</p>
           @endif
 
-
     </div>
-
-
-
-
-
-    <!-- @foreach($cars as $car)
-
-        <div>
-            <img src="/img/cars/{{ $car->image }}" alt="">
-            <p>{{ $car->marca }}</p>
-            <p>{{ $car->descricao }}</p>
-            <p>{{ $car->ano }}</p>
-            <p>{{ $car->modelo }}</p>
-            <p>{{ $car->km }}</p>
-            <p>{{ $car->preco }}</p>
-            <a href="/cars/{{ $car->id }}" class="btn btn-primary">Ver</a>
-        </div>
-    @endforeach
-
-    @if(count($cars) ==0 && $search)
-        <p class="fs-4">{{ $search }} não encontrado</p>
-    @elseif(count($cars) == 0)
-        <p>Não há carros registrados</p>
-    @endif -->
 
 
 </main>

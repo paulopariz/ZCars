@@ -1,5 +1,6 @@
 body{
     font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
 }
 a.nav-link{
     color: #000000;
@@ -75,4 +76,19 @@ main{
     -webkit-transform: scale(1.02);
     transform: scale(1.02);
     transition: all 0.2s;
+}
+ label{
+    margin-top: 17px;
+    margin-bottom: 2px;
+    font-weight: 500;
+ }
+
+ .x{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+ }
+
+button.negociar{
+    padding: 13px 187px;
+    margin-top: 15px;
 }
