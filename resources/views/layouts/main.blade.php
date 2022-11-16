@@ -24,7 +24,7 @@
         <header style="max-width: 1200px; margin: auto; margin-top: 20px">
             <nav class="navbar navbar-expand-lg static-top">
                 <div>
-                    <a  class="navbar-brand" href="#">
+                    <a  class="navbar-brand" href="/">
                         <img src="/img/logo.png" alt="logo" width="48">
                     </a>
                 </div>
@@ -72,5 +72,12 @@
             </div>
         </main>
 
+        <footer style="margin-top: 9rem">
+            <div class="d-flex justify-content-center">
+                <img src="img/logo.png" width="40" alt="">
+            </div>
+            <hr>
+            <p class="text-center ">© 2022</p>
+        </footer>
     </body>
 </html>

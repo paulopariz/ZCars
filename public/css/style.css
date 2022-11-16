@@ -26,7 +26,7 @@ main{
     display: flex;
     gap: 12rem;
     justify-content: center;
-    margin-bottom: 6rem;
+    margin-bottom: 13rem;
 }
 .opcoes > div{
     display: flex;
@@ -62,3 +62,17 @@ main{
     background-color: #bf0404;
 }
 
+.img-car{
+    position: absolute;
+  left: 50%;
+  top: 10%;
+  height: 100%;
+  width: auto;
+  transform: translate(-50%,-10%);
+  transition: 0.2s;
+}
+.card:hover{
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+    transition: all 0.2s;
+}

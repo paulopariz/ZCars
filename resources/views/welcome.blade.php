@@ -43,72 +43,53 @@
 
     </div>
 
+
     <div>
-        <div class="container text-center" style="margin-top: 5rem;">
-            <div class="row">
-              <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="img/cars/x.jpg" class="card-img-top" alt="...">
+        <div class="container text-center" style="margin-top: 7rem; margin-bottom: 7rem;">
+
+            <div class="row row-cols-3">
+
+                @foreach($cars as $car)
+
+              <div class="col" style="margin-bottom: 5rem;">
+
+                <div class="card" style="width: 20rem;  overflow: hidden;">
+                    <div style="position: relative; height: 180px; overflow: hidden;">
+                        <a href="/cars/{{ $car->id }}">
+                            <img src="/img/cars/{{ $car->image }}" class="card-img-top img-car" alt="...">
+                        </a>
+                    </div>
                     <div class="card-body">
-                      <h5 class="card-title">Chevrolet S10</h5>
+                      <h5 class="card-title">{{ $car->marca }} {{ $car->modelo }}</h5>
 
                       <div class="d-flex justify-content-center gap-5" style="margin-top:1.2rem;">
-                          <p class="card-text fw-bold text-black-50">2022</p>
-                          <p class="card-text fw-bold text-black-50">7000 KM</p>
+                          <p class="card-text fw-bold text-black-50">{{ $car->ano }}</p>
+                          <p class="card-text fw-bold text-black-50">{{ $car->km }} KM</p>
                       </div>
 
                       <div class="d-flex align-items-center justify-content-center  gap-5">
-                          <p class="fs-4 fw-bold" style="margin-top: 17px;">R$ 75000 </p>
-                          <a href="" class="fs-4 d-flex align-items-center text-decoration-none text-danger">Ver<i class="bi bi-arrow-right-short fs-2 text-danger"></i></a>
+                          <p class="fs-4 fw-bold" style="margin-top: 17px;">R$ {{ $car->preco }} </p>
+                          <a href="/cars/{{ $car->id }}" class="fs-4 d-flex align-items-center text-decoration-none text-danger">Ver<i class="bi bi-arrow-right-short fs-2 text-danger"></i></a>
                       </div>
                     </div>
                 </div>
+
               </div>
+              @endforeach
 
 
-                    <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="img/cars/x.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Chevrolet S10</h5>
-
-                      <div class="d-flex justify-content-center gap-5" style="margin-top:1.2rem;">
-                          <p class="card-text fw-bold text-black-50">2022</p>
-                          <p class="card-text fw-bold text-black-50">7000 KM</p>
-                      </div>
-
-                      <div class="d-flex align-items-center justify-content-center  gap-5">
-                          <p class="fs-4 fw-bold" style="margin-top: 17px;">R$ 75000 </p>
-                          <a href="" class="fs-4 d-flex align-items-center text-decoration-none text-danger">Ver<i class="bi bi-arrow-right-short fs-2 text-danger"></i></a>
-                      </div>
-                    </div>
-
-
-                </div>
-              </div>
-
-
-                    <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="img/cars/x.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Chevrolet S10</h5>
-
-                      <div class="d-flex justify-content-center gap-5" style="margin-top:1.2rem;">
-                          <p class="card-text fw-bold text-black-50">2022</p>
-                          <p class="card-text fw-bold text-black-50">7000 KM</p>
-                      </div>
-
-                      <div class="d-flex align-items-center justify-content-center  gap-5">
-                          <p class="fs-4 fw-bold" style="margin-top: 17px;">R$ 75000 </p>
-                          <a href="" class="fs-4 d-flex align-items-center text-decoration-none text-danger">Ver<i class="bi bi-arrow-right-short fs-2 text-danger"></i></a>
-                      </div>
-                    </div>
-                </div>
-              </div>
 
             </div>
+
           </div>
+
+
+          @if(count($cars) ==0 && $search)
+              <p class="fs-4">{{ $search }} não encontrado</p>
+          @elseif(count($cars) == 0)
+              <p>Não há carros registrados</p>
+          @endif
+
 
     </div>
 
@@ -116,7 +97,7 @@
 
 
 
-    @foreach($cars as $car)
+    <!-- @foreach($cars as $car)
 
         <div>
             <img src="/img/cars/{{ $car->image }}" alt="">
@@ -134,7 +115,8 @@
         <p class="fs-4">{{ $search }} não encontrado</p>
     @elseif(count($cars) == 0)
         <p>Não há carros registrados</p>
-    @endif
+    @endif -->
+
 
 </main>
 @endsection
