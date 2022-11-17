@@ -83,11 +83,6 @@ main{
     font-weight: 500;
  }
 
- .x{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
- }
-
 button.negociar{
     padding: 13px 187px;
     margin-top: 15px;

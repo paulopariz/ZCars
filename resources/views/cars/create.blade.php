@@ -39,6 +39,37 @@
 
         </div>
 
+
+        <div class="form-group">
+            <label for="title">Combustivel</label>
+
+            <div class="form-check d-flex align-items-center gap-3">
+                <input class="form-check-input" type="radio" name="combustivel" id="flexRadioDefault1" value="Gasolina">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Gasolina
+                </label>
+              </div>
+              <div class="form-check d-flex align-items-center gap-3">
+                <input class="form-check-input" type="radio" name="combustivel" id="flexRadioDefault2" value="Etanol">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    Etanol
+                </label>
+              </div>
+              <div class="form-check d-flex align-items-center gap-3">
+                <input class="form-check-input" type="radio" name="combustivel" id="flexRadioDefault2" value="Diesel">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    Diesel
+                </label>
+              </div>
+              <div class="form-check d-flex align-items-center gap-3">
+                <input class="form-check-input" type="radio" name="combustivel" id="flexRadioDefault2" value="GNV">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    GNV
+                </label>
+              </div>
+
+        </div>
+
         <div class="form-group">
         <label for="title"></label>
             <textarea name="descricao" class="form-control" placeholder="Descrição"></textarea>
@@ -53,7 +84,7 @@
             <img class="img-fluid" id="preview" src="" alt="">
         </div>
 
-        <input style="margin-top: 18px" type="submit" class="btn btn-dark" value="Cadastrar Carro">
+        <input style="margin-top: 18px" type="submit" class="btn btn-dark" id="liveAlertBtn" value="Cadastrar Carro">
 
     </form>
 </div>

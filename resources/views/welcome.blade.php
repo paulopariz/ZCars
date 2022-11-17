@@ -32,7 +32,7 @@
     </div>
 
     <div>
-            <h2>Buscar por carro</h2>
+            <h2 class="fs-4 fw-bold">BUSCAR POR CARRO</h2>
 
         <form action="/" method="GET">
             <div class="input-group mb-3" style="margin-top: 1rem">
@@ -83,7 +83,7 @@
           </div>
 
 
-          @if(count($cars) ==0 && $search)
+          @if(count($cars) == 0 && $search)
               <p class="fs-4">{{ $search }} não encontrado</p>
           @elseif(count($cars) == 0)
               <p>Não há carros registrados</p>

@@ -21,6 +21,7 @@ class CreateCarsTable extends Migration
             $table->string("ano");
             $table->string("km");
             $table->string("preco");
+            $table->string("combustivel");
             $table->text("descricao");
         });
     }

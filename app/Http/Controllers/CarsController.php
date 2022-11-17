@@ -26,7 +26,7 @@ class CarsController extends Controller
 
         }
 
-        
+
 
         return view('welcome', ['cars' => $cars, 'search' => $search]);
     }
@@ -36,7 +36,7 @@ class CarsController extends Controller
     }
 
     public function store(Request $request) {
-        
+
         $car = new Car;
 
         $car->marca = $request->marca;
@@ -44,6 +44,7 @@ class CarsController extends Controller
         $car->ano = $request->ano;
         $car->km = $request->km;
         $car->preco = $request->preco;
+        $car->combustivel = $request->combustivel;
         $car->descricao = $request->descricao;
 
         // Imagem
@@ -65,7 +66,7 @@ class CarsController extends Controller
 
         $car->save();
 
-        return redirect('/')->with('msg', 'Carro adicionado');
+        return redirect('/')->with('msg', 'Carro adicionado com sucesso!');
 
     }
 
@@ -91,7 +92,7 @@ class CarsController extends Controller
 
         Car::findOrFail($id)->delete();
 
-        return redirect('/dashboard')->with('msg', 'Carro excluído!');
+        return redirect('/dashboard')->with('msg2', 'Carro excluído com sucesso!');
     }
 
     public function edit($id) {
@@ -108,19 +109,19 @@ class CarsController extends Controller
                 // Update Imagem
                 if($request->hasFile('image') && $request->file('image')->isValid()) {
                     $requestImage = $request->image;
-        
+
                     $extension = $requestImage->extension();
-        
+
                     $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
-        
+
                     $requestImage->move(public_path('img/cars'), $imageName);
-        
+
                     $data['image'] = $imageName;
                 }
 
         Car::findOrFail($request->id)->update($data);
 
-        return redirect('/dashboard')->with('msg', 'Carro editado!');
+        return redirect('/dashboard')->with('msg', 'Carro editado com sucesso!');
 
     }
 }

@@ -5,7 +5,7 @@
 @section('content')
 
     <div class="col-md-10 offset-md-1">
-        <h2 class="text-center fw-bold">Carros cadastrados</h2>
+        <h4 class="text-center fw-bold">CARROS CADASTRADOS</h3>
 
     </div>
     <div class="col-md-10 offset-md-1">
@@ -18,6 +18,7 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Carro</th>
+                    <th scope="col">Combustível</th>
                     <th scope="col">Ano</th>
                     <th scope="col">KM</th>
                     <th scope="col">Preço</th>
@@ -28,9 +29,10 @@
             <tbody>
                 @foreach($cars as $car)
                     <tr>
-                        <td scropt="row">{{ $loop->index + 1 }}</td>
-                        <td><a href="/cars/{{ $car->id }}">{{ $car->marca }} {{ $car->modelo }}</a></td>
+                        <td scropt="row" class="fw-bold">{{ $loop->index + 1 }}</td>
+                        <td><a class="text-dark fw-bold" href="/cars/{{ $car->id }}">{{ $car->marca }} {{ $car->modelo }}</a></td>
 
+                        <td>{{ $car->combustivel }}</td>
                         <td>{{ $car->ano }}</td>
                         <td>{{ $car->km }}</td>
                         <td>{{ $car->preco }}</td>

@@ -8,9 +8,10 @@
 
 
     <div class="col-md-10 offset-md-1">
-        <a href="/" class="d-flex gap-1 align-items-center text-decoration-none text-dark">
+
+        <a href="/" style="width: 100px" class="d-flex gap-1 align-items-center text-decoration-none text-dark mb-5">
             <i class="bi bi-arrow-left-short fs-3"></i>
-            <p class="fs-6 mt-3 fw-bold">Voltar</p>
+            <p class="fs-6 mt-3 fw-bold">VOLTAR</p>
         </a>
         <div class="row">
             <div class="col-md-6">
@@ -28,15 +29,20 @@
             </div>
 
             <div class="col-md-12 mt-4">
-                <div class="bg-black d-flex gap-5">
+                <div class="d-flex gap-5">
                     <div class="d-flex gap-3">
-                        <i class="bi bi-calendar-event fs-4"></i>
-                        <p class="fs-4">{{ $car->ano }}</p>
+                        <i class="bi bi-calendar-event fs-5"></i>
+                        <p class="fs-5">{{ $car->ano }}</p>
                     </div>
 
                     <div class="d-flex gap-3">
-                        <i class="bi bi-speedometer2 fs-4"></i>
-                        <p class="fs-4">{{ $car->km }} KM</p>
+                        <i class="bi bi-speedometer2 fs-5"></i>
+                        <p class="fs-5">{{ $car->km }} KM</p>
+                    </div>
+
+                    <div class="d-flex gap-3">
+                        <i class="bi bi-fuel-pump fs-5"></i>
+                        <p class="fs-5">{{ $car->combustivel }}</p>
                     </div>
                 </div>
             </div>

@@ -69,10 +69,17 @@
         <main class="container">
 
             <div class="container-fluid">
-                <div class="row">
+                <div class="row container">
                     @if(session('msg'))
-                        <p class="msg">{{ session('msg') }}</p>
+                    <div class="alert alert-success msg text-center fs-6 text-uppercase" role="alert">{{ session('msg') }}</div>
+
                     @endif
+
+                    @if(session('msg2'))
+                    <div class="alert alert-danger msg text-center fs-6 text-uppercase" role="alert">{{ session('msg2') }}</div>
+
+                    @endif
+
                     @yield('content')
                 </div>
             </div>
