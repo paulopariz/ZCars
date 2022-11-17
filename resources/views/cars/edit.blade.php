@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Editando: ' . $car->marca)
+@section('title', 'Editando: ' . $car->marca . $car->modelo)
 
 @section('content')
 
