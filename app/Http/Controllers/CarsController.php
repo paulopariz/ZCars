@@ -66,7 +66,7 @@ class CarsController extends Controller
 
         $car->save();
 
-        return redirect('/')->with('msg', 'Carro adicionado com sucesso!');
+        return redirect('/')->with('msg', 'Carro cadastrado com sucesso!');
 
     }
 

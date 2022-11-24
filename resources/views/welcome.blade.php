@@ -5,7 +5,7 @@
 @section('content')
 
 <main class="container">
-    <div class="container d-flex align-items-start gap-4">
+    <div class="container d-flex align-items-center gap-4">
         <div>
             <p class="fw-bold title">Encontre o carro<br>
             perfeito para você<span class="text-danger">.</span></p>
