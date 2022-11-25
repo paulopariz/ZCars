@@ -7,21 +7,21 @@ Zcars é um projeto pessoal de venda de carros, feito especialmente com LARAVEL,
 
 https://user-images.githubusercontent.com/111146928/204024532-c48c731c-0813-44cc-bf8c-9c82f969433b.mp4
 
-##Mais
+## Mais
 - Para cadastrar um carro deve-se informar: Marca, Modelo, Ano, Quilometragem, Preço, Combustível, Descrição, Imagem.
 - Opcões de editar, e remover o anúncio do carro.
 
 ## Conhecimentos
+- BLADE
 - ROTAS
-- VISUALIZAÇÕES
-- CONTROLADORES
-- MIGRAÇÕES
+- VIEWS
+- CONTROLLERS
+- MIGRATIONS
 
 ## 🛠 Tecnologias
 - LARAVEL
--PHP
+- PHP
 - JAVASCRIPT
-- LÂMINA
 - BOOTSTRAP
 - MYSQL
 
